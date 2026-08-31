@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --vybe-theme: #f0625a;
+  --vybe-theme-text: #111111;
+}
+
+@layer base {
+  body {
+    background-color: #faf8f5;
+    color: #111111;
+    font-family: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  }
+}
+
+.vybe-card {
+  background-color: #faf8f5;
+  border: 4px solid #111111;
+  border-radius: 24px;
+  box-shadow: 6px 6px 0px #111111;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vybe-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #111111;
+}
+
+.vybe-btn {
+  background-color: var(--vybe-theme, #f0625a);
+  color: var(--vybe-theme-text, #111111);
+  border: 3px solid #111111;
+  border-radius: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 3px 3px 0px #111111;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vybe-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #111111;
+}
+
+.vybe-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #111111;
+}
+
+.vybe-btn-theme {
+  background-color: var(--vybe-theme, #f0625a);
+  color: var(--vybe-theme-text, #111111);
+}
+
+.vybe-btn-teal {
+  background-color: var(--vybe-theme, #14b8a6);
+  color: var(--vybe-theme-text, #111111);
+}
+
+.vybe-btn-ink {
+  background-color: var(--vybe-theme, #111111);
+  color: var(--vybe-theme-text, #faf8f5);
+}
+
+.vybe-input {
+  width: 100%;
+  border: 3px solid #111111;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #111111;
+  padding: 0.65rem 0.85rem;
+  font-weight: 600;
+}
+
+.vybe-input:focus {
+  outline: none;
+  box-shadow: 3px 3px 0px #111111;
+}
+
+.bg-grid-pattern {
+  background-color: #faf8f5;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+}
+
+.bg-sand-waves {
+  background-color: #f5ead8;
+  background-image:
+    radial-gradient(ellipse at 18% 40%, rgba(240, 98, 90, 0.14) 0%, transparent 52%),
+    radial-gradient(ellipse at 82% 18%, rgba(20, 184, 166, 0.12) 0%, transparent 48%),
+    repeating-radial-gradient(
+      circle at 0 100%,
+      transparent 0,
+      transparent 36px,
+      rgba(17, 17, 17, 0.05) 37px,
+      transparent 40px
+    );
+}
+
+.bg-acid-gradient {
+  background: linear-gradient(45deg, #f0625a33, #14b8a633, #faf8f5);
+  background-size: 200% 200%;
+  animation: acidPulse 15s ease infinite;
+}
+
+@keyframes acidPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
