@@ -148,7 +148,7 @@ export default function Header({ initialProfile }: HeaderProps = {}) {
                 draggable={false}
               />
             </div>
-            <div className="flex flex-col min-w-0">
+            <div className="flex flex-col hidden min-[420px]:block">
               <p className="font-extrabold uppercase tracking-wide truncate text-[#111] group-hover:underline">
                 {loading ? "Loading..." : `Hi ${profile?.username || "there"}!`}
               </p>
